@@ -1,0 +1,1 @@
+{"version":3,"sources":["style.less"],"names":[],"mappings":"AAAA;EACI,YAAA;EACA,kBAAA","sourcesContent":[".sow-image-container {\n    width: 250px;\n    margin-left: 150px;\n}"],"file":"../style.css"}

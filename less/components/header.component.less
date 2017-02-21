@@ -1,0 +1,60 @@
+/*-----------------------------------------------------------------------------------------------------------
+1. Header
+-----------------------------------------------------------------------------------------------------------*/
+// Menu
+.menu {
+    position: relative;
+    .logo {
+        float: left;
+        margin-top: 10px;
+        a {
+            font-size: 25px;
+        }
+    }
+
+    nav {
+        float: right;
+        margin-top: 10px;
+        .toggle-menu {
+            font-size: 25px;
+            margin-top: 10px;
+        }
+        ul {
+            position: absolute;            
+            list-style: none;
+            top: 0;
+            width: 50%;
+            right: -50%;
+            background-color: blue;                
+        }
+    }
+}
+
+.mobile-menu {
+    .menu {
+        nav {
+            ul {
+                display: block;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .menu {        
+        .toggle-menu {
+            display: none;
+        }
+        nav {
+            ul {
+                position: relative;
+                right: inherit;
+                width: auto;
+                background-color: inherit;
+                li {
+                    display: inline;                    
+                }
+            }
+        }
+    }   
+}

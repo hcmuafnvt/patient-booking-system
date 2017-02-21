@@ -1,0 +1,73 @@
+/*-----------------------------------------------------------------------------------------------------------
+CSS3 PROPERTIES 
+-----------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------
+Global
+-----------------------------------------------------------------------------------------------------------*/
+html,
+body {
+  height: 100%;
+}
+.wrapper {
+  position: relative;
+  left: 0;
+  -webkit-transition: left 0.3s ease-in;
+  -moz-transition: left 0.3s ease-in;
+  -o-transition: left 0.3s ease-in;
+  transition: left 0.3s ease-in;
+}
+.wrapper.mobile-menu {
+  left: -50%;
+}
+.main {
+  display: none;
+}
+/*-----------------------------------------------------------------------------------------------------------
+Color Palette
+-----------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------
+1. Header
+-----------------------------------------------------------------------------------------------------------*/
+.menu {
+  position: relative;
+}
+.menu .logo {
+  float: left;
+  margin-top: 10px;
+}
+.menu .logo a {
+  font-size: 25px;
+}
+.menu nav {
+  float: right;
+  margin-top: 10px;
+}
+.menu nav .toggle-menu {
+  font-size: 25px;
+  margin-top: 10px;
+}
+.menu nav ul {
+  position: absolute;
+  list-style: none;
+  top: 0;
+  width: 50%;
+  right: -50%;
+  background-color: blue;
+}
+.mobile-menu .menu nav ul {
+  display: block;
+}
+@media (min-width: 768px) {
+  .menu .toggle-menu {
+    display: none;
+  }
+  .menu nav ul {
+    position: relative;
+    right: inherit;
+    width: auto;
+    background-color: inherit;
+  }
+  .menu nav ul li {
+    display: inline;
+  }
+}
