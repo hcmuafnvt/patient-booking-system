@@ -10,7 +10,7 @@ function toggleMenu() {
 
 function init() {
     $('header').css('min-height', $(window).height());
-    $('body').css('background-size', '150%');
+    //$('body').css('background-size', '150%');
     $('#main').show();
     toggleMenu();
 }

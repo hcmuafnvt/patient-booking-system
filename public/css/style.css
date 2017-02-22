@@ -8,6 +8,10 @@ html,
 body {
   height: 100%;
 }
+body {
+  font-size: 62.5%;
+  font-family: 'Roboto', sans-serif;
+}
 .wrapper {
   position: relative;
   left: 0;
@@ -28,6 +32,10 @@ Color Palette
 /*-----------------------------------------------------------------------------------------------------------
 1. Header
 -----------------------------------------------------------------------------------------------------------*/
+header {
+  background: url('../images/banner1-bg.jpg') no-repeat 87% center fixed;
+  background-size: cover;
+}
 .menu {
   position: relative;
 }
@@ -37,24 +45,27 @@ Color Palette
 }
 .menu .logo a {
   font-size: 25px;
+  color: #fff;
 }
 .menu nav {
   float: right;
   margin-top: 10px;
 }
 .menu nav .toggle-menu {
-  font-size: 25px;
+  font-size: 22px;
   margin-top: 10px;
+  color: #fff;
 }
 .menu nav ul {
   position: absolute;
   list-style: none;
+  display: none;
   top: 0;
   width: 50%;
   right: -50%;
   background-color: blue;
 }
-.mobile-menu .menu nav ul {
+.mobile-menu nav ul {
   display: block;
 }
 @media (min-width: 768px) {
@@ -70,4 +81,48 @@ Color Palette
   .menu nav ul li {
     display: inline;
   }
+}
+.hero-intro {
+  text-align: center;
+  margin: 0px auto;
+  margin-top: 25px;
+}
+.hero-intro span {
+  display: block;
+  color: #fff;
+}
+.hero-intro .line1 {
+  font-size: 3.5em;
+}
+.hero-intro .line2 {
+  font-size: 2em;
+  margin: 5px 20px;
+  opacity: 0.5;
+}
+.search-section {
+  background-color: #e4ecff;
+  margin: 30px 20px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+.search-section .search-type {
+  border-right: 1px solid #fff;
+  padding: 5px 20px;
+  text-align: center;
+}
+.search-section .search-type:last-child {
+  border-right: 0px;
+}
+.search-section .search-type img {
+  width: 50%;
+  margin: 0 auto;
+  display: block;
+}
+.search-section .search-type span {
+  display: block;
+  margin-top: 8px;
+  font-size: 1.1em;
+  font-weight: 600;
+  color: #545454;
 }
