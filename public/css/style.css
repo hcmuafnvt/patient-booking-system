@@ -1,4 +1,7 @@
 /*-----------------------------------------------------------------------------------------------------------
+Color
+-----------------------------------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------------------------------
 CSS3 PROPERTIES 
 -----------------------------------------------------------------------------------------------------------*/
 /*-----------------------------------------------------------------------------------------------------------
@@ -27,8 +30,49 @@ body {
   display: none;
 }
 /*-----------------------------------------------------------------------------------------------------------
-Color Palette
+Select
 -----------------------------------------------------------------------------------------------------------*/
+.select {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+.select select {
+  display: inline-block;
+  width: 100%;
+  font-size: 2em;
+  padding: 7px 15px;
+  cursor: pointer;
+  color: #7b7b7b;
+  border: 0;
+  border-radius: 0;
+  outline: 0;
+  background: #e4ecff;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.select select::-ms-expand {
+  display: none;
+}
+.select select:disabled {
+  pointer-events: none;
+  opacity: .5;
+}
+.select__arrow {
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  border-width: 8px 5px 0 5px;
+  border-style: solid;
+  border-color: #7b7b7b transparent transparent transparent;
+}
+.select select:disabled ~ .select__arrow {
+  border-top-color: #ccc;
+}
 /*-----------------------------------------------------------------------------------------------------------
 1. Header
 -----------------------------------------------------------------------------------------------------------*/
@@ -92,37 +136,70 @@ header {
   color: #fff;
 }
 .hero-intro .line1 {
-  font-size: 3.5em;
+  font-size: 3.3em;
 }
 .hero-intro .line2 {
   font-size: 2em;
   margin: 5px 20px;
   opacity: 0.5;
 }
-.search-section {
+.search-section .search-types {
   background-color: #e4ecff;
-  margin: 30px 20px;
+  margin: 30px 10px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
 }
-.search-section .search-type {
+.search-section .search-types .search-type {
   border-right: 1px solid #fff;
-  padding: 5px 20px;
+  padding: 5px 0px;
   text-align: center;
 }
-.search-section .search-type:last-child {
+.search-section .search-types .search-type.active {
+  background-color: #ffcd7f;
+}
+.search-section .search-types .search-type:last-child {
   border-right: 0px;
 }
-.search-section .search-type img {
-  width: 50%;
+.search-section .search-types .search-type img {
+  width: 30%;
   margin: 0 auto;
   display: block;
 }
-.search-section .search-type span {
+.search-section .search-types .search-type span {
   display: block;
   margin-top: 8px;
-  font-size: 1.1em;
-  font-weight: 600;
-  color: #545454;
+  font-size: 1.5em;
+  font-weight: 500;
+  color: #7b7b7b;
+}
+.search-section .search-filter-1 {
+  margin: 0px 10px;
+}
+.search-section .search-filter-1 .select-wrapper {
+  width: 47%;
+}
+.search-section .search-filter-2 {
+  margin: 15px 10px;
+}
+.search-section .search-filter-2 .search-box {
+  width: 100%;
+  height: 31px;
+  font-size: 2em;
+  padding-left: 10px;
+  background-color: #e4ecff;
+  border: 0px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  border-radius: 0px;
+  color: #7b7b7b;
+}
+.search-section .btn-search {
+  color: #fff;
+  background-color: #f7b841;
+  border-color: #ccc;
+  margin: 0px auto;
+  display: block;
+  width: 100px;
+  letter-spacing: 1.5px;
 }

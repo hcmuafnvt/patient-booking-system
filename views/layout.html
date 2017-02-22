@@ -37,23 +37,55 @@
                 </nav>
             </div>
             <div class="hero-intro">
-                <span class="line1">Chọn loại dịch vụ bạn cần tìm</span>
+                <span class="line1">Chọn loại dịch vụ bạn cần khám</span>
                 <span class="line2">Với 100+ phòng khám, 1000+ bác sỹ và 2000+ điều dưỡng, chúc bạn kiếm được dịch vụ nhanh nhất và hài lòng nhất</span>
             </div>
-            <div class="search-section row">
-                <div class="col-xs-4 col-sm-4 search-type">
-                    <img src="public/images/clinic-icon.png" alt="Search by clinic" title="Search by clinic">
-                    <span class="clinic-icon">PHÒNG KHÁM</span>
+            <div class="search-section container">
+                <div class="search-types row">
+                    <div class="col-xs-4 col-sm-4 search-type active">
+                        <img src="public/images/clinic-icon.png" alt="Search by clinic" title="Search by clinic">
+                        <span class="clinic-icon">PHÒNG KHÁM</span>
+                    </div>
+                    <div class="col-xs-4 col-sm-4 search-type">
+                        <img src="public/images/doctor-icon.png" alt="Search by clinic" title="Search by clinic">
+                        <span>BÁC SỸ</span>
+                    </div>
+                    <div class="col-xs-4 col-sm-4 search-type">
+                        <img src="public/images/nurse-icon.png" alt="Search by clinic" title="Search by clinic">
+                        <span>ĐIỀU DƯỠNG</span>
+                    </div>
+                </div><!-- end .search-types -->
+                
+                <div class="search-filter-1">
+                    <div class="select-wrapper pull-left">
+                        <div class="select">
+                            <select id="select-search-by-specialist">
+                                <option value="">Chuyên khoa</option>
+                                <option value="">Tim mạch</option>
+                                <option value="">Tai mũi họng</option>
+                                <option value="">Nhi</option>
+                            </select>
+                            <div class="select__arrow"></div>
+                        </div>      
+                    </div>
+                    <div class="select-wrapper pull-right">
+                        <div class="select">
+                            <select id="select-search-by-city">
+                                <option value="">Tỉnh thành</option>
+                                <option value="">Hồ Chí Minh</option>
+                                <option value="">Hà Nội</option>
+                                <option value="">Bình Định</option>
+                            </select>
+                            <div class="select__arrow"></div>
+                        </div>        
+                    </div>                               
+                </div> <!-- .search-filter-1 -->
+                <div class="clearfix"></div>
+                <div class="search-filter-2">
+                    <input type="text" class="search-box" placeholder="Nhập phòng khám bạn cần tìm">
                 </div>
-                <div class="col-xs-4 col-sm-4 search-type">
-                    <img src="public/images/doctor-icon.png" alt="Search by clinic" title="Search by clinic">
-                    <span>BÁC SỸ</span>
-                </div>
-                <div class="col-xs-4 col-sm-4 search-type">
-                    <img src="public/images/nurse-icon.png" alt="Search by clinic" title="Search by clinic">
-                    <span>ĐIỀU DƯỞNG</span>
-                </div>
-            </div>       
+                <button class="btn-search btn btn-default">Tìm kiếm</button>
+            </div><!-- end .search-section -->  
         </header>
 
         <main id="main" class="main" role="main">
