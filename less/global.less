@@ -8,19 +8,22 @@ html, body {
 
 body {
     font-size: 62.5%;
-    font-family: 'Roboto', sans-serif;
+    //font-family: 'Roboto', sans-serif;
 }
 
 // .wrapper
 .wrapper {
-    position: relative;
-    left: 0;
-    .transition(left 0.3s ease-in);
-    &.mobile-menu {        
-        left: -50%;
-    }
+    
 }
 
 .main {
-    display: none;
+    position: relative;
+    left: 0;
+    .transition(left 0.3s ease-in);    
+}
+
+&.mobile-menu {
+    .main {
+        left: -60%;
+    }
 }

@@ -7,87 +7,29 @@
     <title>Patient Booking System</title>  
 
     <!-- My style -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet"> 
+    <!--<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet"> -->
     <link rel='stylesheet' href='public/css/style.min.css' type='text/css' media='all' />
     <!-- My style -->
 </head>
 
 <body>
     <div class="wrapper">
+        <nav role="navigation" class="main-menu">            
+            <ul>
+                <li>About</li>
+                <li>Login</li>                    
+            </ul>
+        </nav>
         <header>
-            <!--<div class="video-wrapper">
-                <video playsinline autoplay muted loop id="bgvid">                
-                    <source src="public/videos/video-bg.mp4" type="video/mp4">
-                </video>
-                <div class="video-overlay"></div>
-            </div>            -->
-
-            <div class="menu container">           
-                <h1 class="logo">
-                    <a href="#" title="Patient Booking System">
-                        PBS
-                    </a>
-                </h1>
-                <nav role="navigation">
-                    <span class="glyphicon glyphicon-menu-hamburger toggle-menu"></span>
-                    <ul>
-                        <li>About</li>
-                        <li>Login</li>                    
-                    </ul>
-                </nav>
+            <div class="logo pull-left">
+                <a href="#" title="Patient Booking System">
+                    <img src="public/images/logo.png" alt="Patient Booking System - Logo" title="Patient Booking System" class="logo">
+                </a>
             </div>
-            <div class="hero-intro">
-                <span class="line1">Chọn loại dịch vụ bạn cần khám</span>
-                <span class="line2">Với 100+ phòng khám, 1000+ bác sỹ và 2000+ điều dưỡng, chúc bạn kiếm được dịch vụ nhanh nhất và hài lòng nhất</span>
-            </div>
-            <div class="search-section container">
-                <div class="search-types row">
-                    <div class="col-xs-4 col-sm-4 search-type active">
-                        <img src="public/images/clinic-icon.png" alt="Search by clinic" title="Search by clinic">
-                        <span class="clinic-icon">PHÒNG KHÁM</span>
-                    </div>
-                    <div class="col-xs-4 col-sm-4 search-type">
-                        <img src="public/images/doctor-icon.png" alt="Search by clinic" title="Search by clinic">
-                        <span>BÁC SỸ</span>
-                    </div>
-                    <div class="col-xs-4 col-sm-4 search-type">
-                        <img src="public/images/nurse-icon.png" alt="Search by clinic" title="Search by clinic">
-                        <span>ĐIỀU DƯỠNG</span>
-                    </div>
-                </div><!-- end .search-types -->
-                
-                <div class="search-filter-1">
-                    <div class="select-wrapper pull-left">
-                        <div class="select">
-                            <select id="select-search-by-specialist">
-                                <option value="">Chuyên khoa</option>
-                                <option value="">Tim mạch</option>
-                                <option value="">Tai mũi họng</option>
-                                <option value="">Nhi</option>
-                            </select>
-                            <div class="select__arrow"></div>
-                        </div>      
-                    </div>
-                    <div class="select-wrapper pull-right">
-                        <div class="select">
-                            <select id="select-search-by-city">
-                                <option value="">Tỉnh thành</option>
-                                <option value="">Hồ Chí Minh</option>
-                                <option value="">Hà Nội</option>
-                                <option value="">Bình Định</option>
-                            </select>
-                            <div class="select__arrow"></div>
-                        </div>        
-                    </div>                               
-                </div> <!-- .search-filter-1 -->
-                <div class="clearfix"></div>
-                <div class="search-filter-2">
-                    <input type="text" class="search-box" placeholder="Nhập phòng khám bạn cần tìm">
-                </div>
-                <button class="btn-search btn btn-default">Tìm kiếm</button>
-            </div><!-- end .search-section -->  
+            <div class="pull-right">
+                <span class="glyphicon glyphicon-menu-hamburger toggle-menu"></span>
+            </div>      
         </header>
-
         <main id="main" class="main" role="main">
             <%-body%>
         </main>

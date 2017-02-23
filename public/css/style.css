@@ -13,9 +13,8 @@ body {
 }
 body {
   font-size: 62.5%;
-  font-family: 'Roboto', sans-serif;
 }
-.wrapper {
+.main {
   position: relative;
   left: 0;
   -webkit-transition: left 0.3s ease-in;
@@ -23,11 +22,8 @@ body {
   -o-transition: left 0.3s ease-in;
   transition: left 0.3s ease-in;
 }
-.wrapper.mobile-menu {
-  left: -50%;
-}
-.main {
-  display: none;
+.mobile-menu .main {
+  left: -60%;
 }
 /*-----------------------------------------------------------------------------------------------------------
 Select
@@ -40,8 +36,6 @@ Select
 .select select {
   display: inline-block;
   width: 100%;
-  font-size: 2em;
-  padding: 7px 15px;
   cursor: pointer;
   color: #7b7b7b;
   border: 0;
@@ -74,43 +68,64 @@ Select
   border-top-color: #ccc;
 }
 /*-----------------------------------------------------------------------------------------------------------
-1. Header
+Main Menu
+-----------------------------------------------------------------------------------------------------------*/
+.main-menu {
+  position: fixed;
+  width: 60%;
+  right: -60%;
+  -webkit-transition: right 0.3s ease-in;
+  -moz-transition: right 0.3s ease-in;
+  -o-transition: right 0.3s ease-in;
+  transition: right 0.3s ease-in;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.main-menu ul {
+  position: absolute;
+  list-style: none;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: blue;
+}
+/*-----------------------------------------------------------------------------------------------------------
+Header
 -----------------------------------------------------------------------------------------------------------*/
 header {
-  background: url('../images/banner1-bg.jpg') no-repeat 87% center fixed;
-  background-size: cover;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  -webkit-transition: left 0.3s ease-in;
+  -moz-transition: left 0.3s ease-in;
+  -o-transition: left 0.3s ease-in;
+  transition: left 0.3s ease-in;
+  background-color: #1a4f6f;
+  height: 50px;
+  z-index: 1000;
 }
-.menu {
-  position: relative;
-}
-.menu .logo {
+header .logo {
   float: left;
-  margin-top: 10px;
+  width: 65px;
+  margin-top: 4px;
+  margin-left: 5px;
 }
-.menu .logo a {
+header .logo a {
   font-size: 25px;
   color: #fff;
 }
-.menu nav {
-  float: right;
-  margin-top: 10px;
-}
-.menu nav .toggle-menu {
-  font-size: 22px;
-  margin-top: 10px;
+header .toggle-menu {
+  font-size: 24px;
+  margin: 12px 10px 0px;
   color: #fff;
 }
-.menu nav ul {
-  position: absolute;
-  list-style: none;
-  display: none;
-  top: 0;
-  width: 50%;
-  right: -50%;
-  background-color: blue;
+.mobile-menu header {
+  left: -60%;
 }
-.mobile-menu nav ul {
-  display: block;
+.mobile-menu .main-menu {
+  right: 0;
 }
 @media (min-width: 768px) {
   .menu .toggle-menu {
@@ -126,67 +141,99 @@ header {
     display: inline;
   }
 }
-.hero-intro {
-  text-align: center;
-  margin: 0px auto;
-  margin-top: 25px;
+.home-page .search-wrapper {
+  background: url('../images/banner1-bg.jpg') no-repeat 87% center fixed;
+  background-size: cover;
 }
-.hero-intro span {
+.home-page .search-wrapper .hero-intro {
+  text-align: center;
+  color: #fff;
+  margin: 0px auto;
+  padding-top: 65px;
+}
+.home-page .search-wrapper .hero-intro span {
   display: block;
   color: #fff;
 }
-.hero-intro .line1 {
-  font-size: 3.3em;
+.home-page .search-wrapper .hero-intro .line1 {
+  font-size: 3.55em;
 }
-.hero-intro .line2 {
+.home-page .search-wrapper .hero-intro .line2 {
   font-size: 2em;
   margin: 5px 20px;
   opacity: 0.5;
 }
-.search-section .search-types {
+.home-page .search-wrapper .search-section .search-types {
   background-color: #e4ecff;
   margin: 30px 10px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
 }
-.search-section .search-types .search-type {
+.home-page .search-wrapper .search-section .search-types .search-type {
   border-right: 1px solid #fff;
   padding: 5px 0px;
   text-align: center;
 }
-.search-section .search-types .search-type.active {
+.home-page .search-wrapper .search-section .search-types .search-type.active {
   background-color: #ffcd7f;
 }
-.search-section .search-types .search-type:last-child {
-  border-right: 0px;
+.home-page .search-wrapper .search-section .search-types .search-type:first-child {
+  -webkit-border-top-left-radius: 3px;
+  -moz-border-top-left-radius: 3px;
+  border-top-left-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -moz-border-bottom-left-radius: 3px;
+  border-bottom-left-radius: 3px;
 }
-.search-section .search-types .search-type img {
+.home-page .search-wrapper .search-section .search-types .search-type:last-child {
+  border-right: 0px;
+  -webkit-border-top-right-radius: 3px;
+  -moz-border-top-right-radius: 3px;
+  border-top-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  -moz-border-bottom-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+.home-page .search-wrapper .search-section .search-types .search-type img {
   width: 30%;
   margin: 0 auto;
   display: block;
 }
-.search-section .search-types .search-type span {
+.home-page .search-wrapper .search-section .search-types .search-type span {
   display: block;
   margin-top: 8px;
   font-size: 1.5em;
   font-weight: 500;
   color: #7b7b7b;
 }
-.search-section .search-filter-1 {
+.home-page .search-wrapper .search-section .search-filter-1 {
   margin: 0px 10px;
 }
-.search-section .search-filter-1 .select-wrapper {
+.home-page .search-wrapper .search-section .search-filter-1 .select-wrapper {
   width: 47%;
 }
-.search-section .search-filter-2 {
+.home-page .search-wrapper .search-section .search-filter-1 .select select {
+  font-size: 2.4em;
+  padding: 7px 25px 7px 10px;
+}
+.home-page .search-wrapper .search-section .search-filter-1 .select .select__arrow {
+  top: 15px;
+  right: 8px;
+}
+.home-page .search-wrapper .search-section .search-filter-2 {
   margin: 15px 10px;
 }
-.search-section .search-filter-2 .search-box {
+.home-page .search-wrapper .search-section .search-filter-2 .search-icon {
+  width: 22px;
+  position: absolute;
+  margin: 6px 0px 0px 6px;
+}
+.home-page .search-wrapper .search-section .search-filter-2 .search-box {
   width: 100%;
-  height: 31px;
-  font-size: 2em;
-  padding-left: 10px;
+  height: 37px;
+  font-size: 2.3em;
+  padding-left: 35px;
   background-color: #e4ecff;
   border: 0px;
   -webkit-border-radius: 0px;
@@ -194,12 +241,17 @@ header {
   border-radius: 0px;
   color: #7b7b7b;
 }
-.search-section .btn-search {
+.home-page .search-wrapper .search-section .search-filter-2 .search-box ::before {
+  content: '<i class="glyphicon glyphicon-search" />';
+}
+.home-page .search-wrapper .search-section .btn-search {
   color: #fff;
   background-color: #f7b841;
   border-color: #ccc;
-  margin: 0px auto;
+  margin: 25px auto;
   display: block;
-  width: 100px;
+  width: 140px;
+  padding-top: 6px;
   letter-spacing: 1.5px;
+  font-size: 3em;
 }

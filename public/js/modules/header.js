@@ -8,10 +8,17 @@ function toggleMenu() {
     })
 }
 
+function handleScrolling() {
+    $(window).on('scroll', function(e) {
+        console.log('scrolling');
+    })
+}
+
 function init() {
-    $('header').css('min-height', $(window).height());
+    handleScrolling();
+    $('.search-wrapper').css('min-height', $(window).height());
     //$('body').css('background-size', '150%');
-    $('#main').show();
+    //$('#main').show();
     toggleMenu();
 }
 
