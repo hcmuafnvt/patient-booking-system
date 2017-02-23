@@ -2,9 +2,8 @@
 
 function toggleMenu() {
     $('.toggle-menu').on('click', function(e) {
-        e.preventDefault();
-
-        $('.wrapper').toggleClass('mobile-menu');
+        e.preventDefault();        
+        $('body').toggleClass('mobile-menu');       
     })
 }
 
